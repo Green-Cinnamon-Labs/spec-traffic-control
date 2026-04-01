@@ -1,32 +1,41 @@
-# Traffic Adaptive Control LAB — Specification
+# Latent Memory — Specification
 
-This repository defines the architectural, control-theoretic,  
-and learning specifications of the Traffic Adaptive Control LAB project.
+This repository defines the research direction, mathematical premises,
+and experimental strategy of the Latent Memory project.
 
-It serves as the authoritative source of control assumptions,  
-learning strategy decisions, and system evolution.
+It serves as the authoritative source of research assumptions,
+design decisions, and project evolution.
 
 ---
 
 ## Objective
 
-> Describe in one technical sentence the primary objective of the project.  
-> Example: "Build a deterministic traffic intersection simulation  
-> integrated with an online adaptive neural controller  
-> capable of optimizing signal timing under dynamic demand."
+Build a long-term memory object for LLMs that persists state across sequences
+without reinjecting all prior tokens — investigating latent and compressed memory
+representations grounded in mathematics.
+
+---
+
+## Research Interest
+
+**TOPIC 2 — LLM Context & Memory**
+
+**Primary:** context compression methods for LLMs, latent/persistent memory across long sequences, memory-augmented transformers, efficient token representation.
+
+**Secondary:** efficient attention mechanisms (linear, sparse, sliding-window), KV cache compression, in-context learning mechanics, long-context architecture design.
+
+---
+
+## Core Research Question
+
+Can long-term memory be maintained in a compact latent object such that,
+given a new token sequence, the model does not need to reprocess all prior tokens
+to recover relevant context?
 
 ---
 
 ## Related Repositories
 
-- [`fork-trafficSimulator`](https://github.com/Green-Cinnamon-Labs/fork-trafficSimulator)  
-  Base traffic simulation engine (Python implementation).  
-  > Describe the current maturity level of the simulator and its limitations.
-
-- [`lab-traffic-adaptive-network`](https://github.com/Green-Cinnamon-Labs/lab-traffic-adaptive-network)  
-  Neural network learning module.  
-  > Define whether this will be pure online learning, reinforcement learning, or a hybrid approach.
-
-- [`traffic-control-bridge`]  
-  Interface layer between simulation state and controller policy.  
-  > Explain that this module defines state, action, and reward.
+- [`lab-latent-memory`](https://github.com/Green-Cinnamon-Labs/lab-latent-memory/tree/main)
+  Experimental lab for latent memory implementations and probes.
+  Active workspace for testing memory compression approaches in practice.
